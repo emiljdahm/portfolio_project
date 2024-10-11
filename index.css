@@ -7,5 +7,9 @@
 
 
 body {
-
+  font-family: raleway;
+  font-size: 16px;
+  background-color: lightslategray;
+  display: flex;
+  justify-content: center;
 }
