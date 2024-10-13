@@ -7,8 +7,14 @@
 
 /* Default rules */
 body {
+  font-family: raleway;
+  display: flex;
+  padding: auto;
+  align-items: center;
+  justify-content: center;
   min-height: 100vh;
-  background-image: url("C:\Users\emil\projects\portfolio_site\Media\IMG_0043.jpg") no-repeat;
+  background-image: url("Media/pexels-gdtography-277628-911738.jpg");
+  background-repeat: no-repeat;
   background-size: cover;
 }
 /* NAV BAR STYLING */
@@ -20,8 +26,10 @@ nav {
   max-height: 4rem;
   padding-top: 2rem;
   padding-left: 2rem;
+  margin-bottom: 2rem;
   display: flex;
   background-color: black;
+ 
 }
 nav a {
   display: inline;
@@ -30,5 +38,33 @@ nav a {
   margin-right: 4rem;
   margin-bottom: 2rem;
   color: white;
+  text-decoration: none;
  
+}
+a.logoText {
+  font-size: 1.5rem;
+  padding: -.5rem;
+  letter-spacing: .25rem;
+
+}
+div.space1 {
+  align-content: center;
+  color: whitesmoke;
+  padding: 16rem;
+  margin-top: 6rem;
+  width: 80vh;
+  max-width: 80%;
+  background-color: #121212;
+  border-radius: .75rem;
+  box-shadow: 10px 10px 5px 2px rgba(41, 41, 43, 0.5);
+}
+
+div.space1 h1 {
+  padding-top: 4rem;
+  text-align: center;
+}
+
+div.space1 h2 {
+  padding-top: 2rem;
+  text-align: center;
 }
