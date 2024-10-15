@@ -19,15 +19,13 @@ body {
   font-family: raleway;
   display: flex;
   flex-direction: column;
-  padding: auto;
   margin: auto;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  height: 100vh;
   background-image: url("Media/pexels-gdtography-277628-911738.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  overflow-x: hidden;
 }
 /* NAV BAR STYLING */
 nav {
@@ -39,7 +37,7 @@ nav {
   display: flex;
   justify-content: flex-end;
   background-color: #121212;
-  z-index: 100;
+  z-index: 10;
  
 }
 .links-container{
@@ -48,6 +46,8 @@ nav {
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-bottom: 2rem;
+  position: absolute;
 }
 nav a {
   height: 100%;
@@ -119,7 +119,7 @@ a {
 }
 
 input {
-  display: none;
+  display: flex;
 }
 
 .cards-container{
@@ -131,19 +131,39 @@ input {
   justify-content: center;
   transform-style: preserve-3d;
   flex-direction: column;
-  margin-bottom: 5rem;
+  margin-bottom: 100px;
 }
-.cards-slides {
+.cards {
   position: relative;
   height:500px;
   width:430px;
   margin-bottom: 20px;
   perspective: 1000px;
   transform-style: preserve-3d;
+  
+}
+.cards .card {
+  display: flex;
+  justify-content: space-between;
+  
+}
+.cards .image img {
+  border-radius: 5px;
+  box-shadow: 15px 15px 45px rgba(0,0,0,50%);
+  margin-top: 2rem;
+  width: 85%;
+  height: 220px;
+  object-fit: cover;
+  transition: all .7s;
+  
+}
+.cards .image img:hover {
+  transform: scale(1.05);
 }
 
+
 .cards label {
-position: relative;
+position: absolute;
 width: 430px;
 left: 0;
 right: 0;
@@ -155,46 +175,100 @@ transition: transform 0.55s ease;
 .cards .card {
   position: relative;
   height: 100%;
-  background-color: #121212;
+  background-color: #484747;
   border-radius: 1rem;
-  padding: 2.5rem 2.75rem;
+  padding: 2rem 2.25rem;
+}
+
+.cards .label .dots {
+  text-align: center;
+}
+.dots div {
+  width: .75rem;
+  height: .75rem;
+  border-radius: 50%;
+  margin-bottom: .75rem;
+}
+.dots div:nth-child(1){
+  background-color: aqua;
+
+}
+.dots div:nth-child(2){
+  background-color: magenta;
+  
+}
+.dots div:nth-child(3){
+  background-color: aliceblue;
+  
+}
+.cards .info {
+  display: block;
+  text-align: end;
+  padding-top: 4rem;
+}
+
+.cards .info span {
+  display: block;
+}
+.info .name {
+  font-size: 2.5rem;
+  color: aliceblue;
+  letter-spacing: .75rem;
+  margin-bottom: 1.5rem;
+  padding-left: 25%;
+
+
 }
 
 
-#s1:checked~.cards #slide3,
-#s2:checked~.cards #slide4,
+#s1:checked~.cards #slide4,
+#s2:checked~.cards #slide5,
 #s3:checked~.cards #slide1,
-#s4:checked~.cards #slide2{
-  box-shadow: 0 1rem 1.5rem rgba(0,0,0,0.25%);
-  transform: translate3d (-70, 0, -220px);
+#s4:checked~.cards #slide2,
+#s5:checked~.cards #slide3{
+  box-shadow: 0 15px 30px rgba(0,0,0,0.25%);
+  transform: translate3d (-70%, 0, -220px);
   --current-color1: red;
   --current-color2: blue; 
 }
 
-#s1:checked~.cards #slide4,
+#s1:checked~.cards #slide5,
 #s2:checked~.cards #slide1,
 #s3:checked~.cards #slide2,
-#s4:checked~.cards #slide3{
-  box-shadow: 0 1.5rem 2rem rgba(0,0,0,0.35%);
-  transform: translate3d (-35, 0, -120px);
+#s4:checked~.cards #slide3,
+#s5:checked~.cards #slide4{
+  box-shadow: 0 20px 40px rgba(0,0,0,0.35%);
+  transform: translate3d (-35%, 0, -120px);
   --current-color1: red;
   --current-color2: blue; 
 }
 #s1:checked~.cards #slide1,
 #s2:checked~.cards #slide2,
 #s3:checked~.cards #slide3,
-#s4:checked~.cards #slide4{
-  box-shadow: 0 2rem 2.5rem rgba(0,0,0,0.45%);
-  transform: translate3d (-16, 0, -120px);
+#s4:checked~.cards #slide4,
+#s5:checked~.cards #slide5{
+  box-shadow: 0 25px 50px rgba(0,0,0,0.45%);
+  transform: translate3d (0, 0, 0);
   --current-color1: red;
   --current-color2: blue; 
 }
 #s1:checked~.cards #slide2,
 #s2:checked~.cards #slide3,
 #s3:checked~.cards #slide4,
-#s4:checked~.cards #slide1{
-  box-shadow: 0 2.5rem 23rem rgba(0,0,0,0.55%);
-  transform: translate3d (-8, 0, -120px);
+#s4:checked~.cards #slide5,
+#s5:checked~.cards #slide1{
+  box-shadow: 0 20px 40px rgba(0,0,0,0.55%);
+  transform: translate3d (-35%, 0, -120px);
+  --current-color1: red;
+  --current-color2: blue; 
+}
+#s1:checked~.cards #slide3,
+#s2:checked~.cards #slide4,
+#s3:checked~.cards #slide5,
+#s4:checked~.cards #slide1,
+#s5:checked~.cards #slide2{
+  box-shadow: 0 15px 30px rgba(0,0,0,0.45%);
+  transform: translate3d (-70%, 0, -220px);
   --current-color1: red;
   --current-color2: blue; 
 }
