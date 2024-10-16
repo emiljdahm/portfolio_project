@@ -137,13 +137,13 @@ div.text_hero {
 }
 div.text_hero button {
   color: red;
-    background: none; /* Remove background */
-    padding: 0; /* Remove padding */
-    border: none; /* Remove border */
-    border-radius: 0; /* Remove border radius */
-    font: inherit; /* Inherit font properties */
-    cursor:pointer ; /* Reset cursor to default */
-    outline: 1px; /* Remove focus outline */
+    background: none; 
+    padding: 0; 
+    border: none;
+    border-radius: 0; 
+    font: inherit;
+    cursor:pointer ; 
+    outline: 1px;
     text-decoration: underline;
   
 }
@@ -152,26 +152,38 @@ div.text_hero h3 {
   font-size: small;
   
 }
+div.hero button:hover {
+  transform: scale(1.03);
+  transition: ease-in .5s;
+}
 
 /*about me container*/
 div.about_me {
   display: none;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
-  border-radius: 20px;
   background-color: aliceblue;
 }
 div.container_me {
+  display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 5rem;
+  font-size: 2rem;
   font-family: raleway;
   font-weight: 200;
   color: #121121;
   text-align: center;
   height: 100vh; 
+}
+div.about_me img {
+  max-height: 50%;
+  max-width: 50%;
+  margin-top: 4rem;
+  padding: 2rem;
+  border-radius: 25px;
 }
 
 
