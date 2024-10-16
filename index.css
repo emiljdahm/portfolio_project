@@ -192,7 +192,25 @@ div.about_me img {
   padding: 2rem;
   border-radius: 25px;
 }
+/*CONTACT FORM*/
 
+form {
+  background-color: aliceblue;
+  padding: 2rem;
+  margin: auto;
+  height: 600px;
+  width: 440px;
+}
+form label {
+  font-size: large;
+  letter-spacing: 1.25px;
+  height: auto;
+}
+form input {
+  background-color: #121121;
+  height: auto;
+  color: whitesmoke;
+}
 
   
 /* footer */
