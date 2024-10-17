@@ -27,9 +27,7 @@
     text-decoration: none;
   }
   
-  input{
-    display: none;
-  }
+ 
 
 /* NAV BAR STYLING */
 nav {
@@ -194,14 +192,18 @@ div.about_me img {
 }
 /*CONTACT FORM*/
 
-form {
+form.contact_form {
   background-color: aliceblue;
-  padding: 2rem;
+  padding: 4rem;
   margin: auto;
-  height: 600px;
-  width: 440px;
+  max-height: 400px;
+  max-width: 240px;
+  border-radius: 20px;
+  box-shadow: 1.5rem 1.5rem 1.5rem rgba(138, 138, 138, 0.905)
 }
 form label {
+  display: inline-flex;
+  flex-direction: column;
   font-size: large;
   letter-spacing: 1.25px;
   height: auto;
@@ -210,6 +212,12 @@ form input {
   background-color: #121121;
   height: auto;
   color: whitesmoke;
+  margin: 2rem;
+}
+
+.inputfield {
+  width: 70%;
+  height: 2rem;
 }
 
   
