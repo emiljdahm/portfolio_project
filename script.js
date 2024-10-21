@@ -8,6 +8,8 @@
     const heroButton = document.getElementsByClassName('hero_button')[0]
     const aboutMeContainer = document.getElementsByClassName('about_me')[0]
     const formBackground = document.getElementsByClassName('contact_form')[0]
+    const closeRespNav = document.getElementsByClassName('navclose')[0]
+
 
     function colorChange() {
 
@@ -37,7 +39,6 @@
             heroDiv.style.display = "none";
         }
     }
-
 
     formBackground.addEventListener("keypress",colorChangeForm)
     heroDiv.addEventListener("click", colorChange);
