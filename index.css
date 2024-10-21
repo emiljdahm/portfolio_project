@@ -1,7 +1,7 @@
 .raleway {
     font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;
-    font-weight: weight;
+    font-weight: 200;
     font-style: normal;
   }
   * {
@@ -11,7 +11,7 @@
 
   html {
     font-size: 12px;
-    font-family: raleway, sans-serif, 'Times New Roman', Times, serif;
+    font-family: "Raleway", sans-serif, 'Times New Roman', Times, serif;
   }
   body {
     display: flex;
@@ -20,7 +20,6 @@
     background-color: #121121;
     overflow-x: hidden;
     height: 100vh;
-    font-family: sans-serif, 'Times New Roman', Times, serif;
   }
   
   a{
@@ -62,7 +61,7 @@ nav a {
  
 }
 nav a:hover {
- background-color: white;
+ background-color: whitesmoke;
  color: black;
 }
 
@@ -121,15 +120,13 @@ div.hero {
   width: 100%;
   height: 100%;
   border-radius: 20px;
-  background-color: aliceblue;
+  background-color: whitesmoke;
 }
 div.text_hero {
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 5rem;
-  font-family: raleway;
-  font-weight: 200;
   color: #121121;
   text-align: center;
   height: 100vh; 
@@ -159,7 +156,7 @@ div.background_img p {
 }
 div.hero button:hover {
   transform: scale(1.03);
-  transition: ease-in .5s;
+  transition: transform 0.05s ease-in;
 }
 
 /*about me container*/
@@ -170,7 +167,8 @@ div.about_me {
   align-items: center;
   width: 100%;
   height: 100%;
-  background-color: aliceblue;
+  background-color: whitesmoke;
+
 }
 div.container_me {
   display: flex;
@@ -192,8 +190,12 @@ div.about_me img {
 }
 /*CONTACT FORM*/
 
+form input:focus {
+  outline: 2px solid #FFF;
+}
+
 form.contact_form {
-  background-color: aliceblue;
+  background-color: whitesmoke;
   padding: 4rem;
   margin: auto;
   max-height: 400px;
@@ -244,7 +246,7 @@ footer a {
   max-height: 2rem;
   margin-right: 4rem;
   padding: 2rem;
-  color: white;
+  color: whitesmoke;
   text-decoration: none;
  
 }
