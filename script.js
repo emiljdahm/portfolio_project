@@ -32,11 +32,28 @@
     function changeAboutMeDisplay(){
         if(aboutMe){
         aboutMe.style.display = "flex"
+        aboutMe.style.transiion = "0.5s ease-in-out;"
          if (heroDiv) {
         heroDiv.style.display = "none"
         }
     }
 }
+//sidebar toggle 
+
+const sidebarToggle = document.getElementById('sidebar-active')
+const closeSidebarButton = document.querySelector('.close-sidebar')
+
+if(closeSidebarButton) {
+    closeSidebarButton.addEventListener('click', ()=> {sidebarToggle.checked = false;
+
+    });
+}
+
+
+//timed color change events 
+setInterval(colorChange, 3000); // Changes every 3 seconds
+setInterval(colorChangeForm, 5000); // Changes every 3 seconds
+
 
 
     //Event Listeners 

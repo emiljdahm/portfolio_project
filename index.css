@@ -25,6 +25,10 @@
   a{
     text-decoration: none;
   }
+  .hero, .contact_form {
+    transition: background-color 0.5s ease-in-out;
+}
+
   
  
 
@@ -48,7 +52,6 @@ nav {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-bottom: 2rem;
   position: absolute;
 }
 nav a {
@@ -80,8 +83,20 @@ nav svg{
   display: none;
 }
 
+/*navbar 2 styling*/
+
+nav.navbar2 {
+  display: none;
+}
+
+nav svg{
+  fill: white;
+}
+/*responsive navbar & media querys*/
+
 @media (max-width:600px) {
   .links-container{
+    display:none;
     background-color: #121212;
     flex-direction: column;
     align-items: flex-start;
@@ -89,7 +104,7 @@ nav svg{
     top: 0;
     right: 0;
     z-index: 100;
-    width: 350px;
+    width: 250px;
     box-shadow: -.5rem 0 .5rem rgba(0,0,0,0.25)
    }
    nav a {
@@ -111,8 +126,12 @@ nav svg{
     display: flex;
   }
 }
+
+#sidebar-active:not(:checked) ~ .links-container {
+  display: none;
+}
 /*HERO*/
-div.hero {
+div.hero, div.about_me {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -132,15 +151,14 @@ div.text_hero {
   height: 100vh; 
 }
 div.text_hero button {
-  color: red;
-    background: none; 
-    padding: 0; 
-    border: none;
-    border-radius: 0; 
+  color: white;
+    background-color: #121212; 
+    padding: 1rem; 
     font: inherit;
     cursor:pointer ; 
-    outline: 1px;
-    text-decoration: underline;
+    border: 0;
+    border-radius: 20px;
+    box-shadow: 1.5rem 1.5rem 1.5rem rgba(138, 138, 138, 0.905)
   
 }
 div.text_hero h3 {
@@ -156,7 +174,8 @@ div.background_img p {
 }
 div.hero button:hover {
   transform: scale(1.03);
-  transition: transform 0.05s ease-in;
+  background-color: red;
+  transition: transform 0.25s ease-in;
 }
 
 /*about me container*/
@@ -165,30 +184,91 @@ div.about_me {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
   background-color: whitesmoke;
+}
+
+div.about_me img {
+  max-width: 50%;
+  max-height: 50%;
+  margin: 1rem;
+  border-radius: 1rem;
 
 }
-div.container_me {
+div.about_me h1 {
+  padding: 2rem;
+  font-size: 3rem;
+  background-color: #121121;
+  color: whitesmoke;
+  border-radius: 1rem;
+  box-shadow: 1.5rem 1.5rem 1.5rem rgba(138, 138, 138, 0.905)
+  
+}
+
+ul.skill-levels {
+  display: flex;
+  flex-direction: row;
+  margin: 2rem;
+  font-size: 3rem;
+  list-style: none;
+  background-color: #121121;
+  color: whitesmoke;
+  border-radius: 1rem;
+  box-shadow: 1.5rem 1.5rem 1.5rem rgba(138, 138, 138, 0.905)
+  
+}
+ul.skill-levels li {
+  margin: 1rem;
+  letter-spacing: .25rem;
+}
+
+div.about_me2 {
+  display: flex;
+  flex-direction: column;
+  max-width: 40%;
+  max-height: 60%;
+  margin: 1rem;
+  align-items: center;
+  justify-content: center;
+  background-color: #121121;
+  color: whitesmoke;
+  border-radius: 1rem;
+  box-shadow: 1.5rem 1.5rem 1.5rem rgba(138, 138, 138, 0.905)
+}
+div.about_me2 image{
+  padding: auto;
+
+}
+
+div.about_me2 h2 {
+  font-size: 3rem;
+  padding: 1rem;
+}
+div.about_me2 p {
+  font-size: 1.5rem;
+  padding: 1rem;
+  max-width:40%;
+}
+
+
+div.container_me{
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 2rem;
-  font-family: raleway;
   font-weight: 200;
   color: #121121;
   text-align: center;
   height: 100vh; 
 }
-div.about_me img {
-  max-height: 50%;
-  max-width: 50%;
-  margin-top: 4rem;
-  padding: 2rem;
-  border-radius: 25px;
-}
 /*CONTACT FORM*/
+
+h1.form_header {
+  display: inline-flex;
+  color: whitesmoke;
+  font-size: 3rem;
+  text-align: center;
+  margin-right: 8rem;
+}
 
 form input:focus {
   outline: 2px solid #FFF;
@@ -224,16 +304,23 @@ form input {
 
   
 /* footer */
-footer {
+div.footer {
   position: absolute;
   bottom: 0;
   left: 0;
   background-color: #121212;
   width: 100%;
   margin-top: 1rem;
-  display: flex;
-  
+  display: inline-flex;
+}
 
+footer {
+  bottom: 0;
+  left: 0;
+  background-color: #121212;
+  width: 100%;
+  margin-top: 1rem;
+  display: flex;
 }
 
 footer a:hover{
@@ -241,12 +328,20 @@ footer a:hover{
 }
 
 footer a {
-  display: inline;
-  width: 100%;
-  max-height: 2rem;
+  max-width: 75%;
+  max-height: 3rem;
   margin-right: 4rem;
   padding: 2rem;
   color: whitesmoke;
   text-decoration: none;
  
+}
+
+div.footer p {
+  color: whitesmoke;
+  margin: 1rem;
+  bottom: 0;
+  align-self: center;
+  justify-content: center;
+  display: inline;
 }
