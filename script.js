@@ -61,6 +61,13 @@ if(closeSidebarButton) {
 setInterval(colorChange, 3000); // Changes every 3 seconds
 setInterval(colorChangeForm, 5000); // Changes every 3 seconds
 
+//mobile button action
+setInterval(()=> {
+    aboutMeButton.style.transition = "transform 0.25s ease-in-out"
+   aboutMeButton.style.transform = "scale(1.15)"
+   aboutMeButton.style.backgroundColor = "red"
+}, 3000); // Changes every 3 seconds
+
 
 
 
