@@ -86,12 +86,10 @@ nav svg{
   display: none;
 }
 
-/*navbar 2 styling*/
-
-
 nav svg{
   fill: white;
 }
+
 /*responsive navbar & media querys*/
 @media (max-width:1297px) {
   div.text_hero h3 {
@@ -106,12 +104,30 @@ nav svg{
   }
 
 }
-
-@media (max-width:963px) {
-
+@media screen and (max-width: 963px) {
+  div.about_me h1.main_h1 {
+    font-size: 3rem;
+    padding: 0.5rem;
+  }
+  div.about_me div.about_me2 {
+    max-width: 90%;
+    max-height: 60%;
+  }
+    div.about_me div.about_me2 h2.two_title{
+    font-size: 2rem;
+  }
+  div.about_me div.about_me2 p{
+    font-size: 1.5rem;
+    max-width: 60%;
+  }
+  div.about_me ul.skill-levels li.skills{
+    font-size: 1.5rem;
+  }
+  
 }
 
-@media (max-width:740px) {
+
+@media (max-width: 740px) {
   .links-container{
 
     background-color: #121212;
@@ -164,7 +180,11 @@ nav svg{
     align-items: center;
     justify-content: center;
   }
+  div.form_containter h1.form_header {
+    font-size: 5rem;
+  }
 }
+
 /*HERO*/
 div.hero, div.about_me {
   display: flex;
@@ -302,7 +322,8 @@ h1.form_header {
   color: whitesmoke;
   font-size: 3rem;
   align-items: start;
-  margin-right: 8rem;
+  margin-bottom: 4rem;
+
 }
 
 form input:focus {

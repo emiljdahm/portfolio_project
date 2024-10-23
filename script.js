@@ -32,7 +32,7 @@
     function changeAboutMeDisplay(){
         if(aboutMe){
         aboutMe.style.display = "flex"
-        aboutMe.style.transiion = "0.5s ease-in-out;"
+        aboutMe.style.transiion = "0.5s ease-in-out;";
          if (heroDiv) {
         heroDiv.style.display = "none"
         }
