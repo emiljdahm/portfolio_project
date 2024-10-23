@@ -54,6 +54,9 @@ nav {
   align-items: center;
   position: absolute;
 }
+.logoText2 {
+  display: none;
+}
 nav a {
   height: 100%;
   padding: 0 2rem;
@@ -85,24 +88,36 @@ nav svg{
 
 /*navbar 2 styling*/
 
-nav.navbar2 {
-  display: none;
-}
 
 nav svg{
   fill: white;
 }
 /*responsive navbar & media querys*/
+@media (max-width:1297px) {
+  div.text_hero h3 {
+    display: none;
+  }
 
-@media (max-width:600px) {
+}
+
+@media (max-width:1139px) {
+  div.text_hero h1 {
+    font-size: 8rem;
+  }
+
+}
+
+@media (max-width:963px) {
+
+}
+
+@media (max-width:740px) {
   .links-container{
-    display:none;
+
     background-color: #121212;
     flex-direction: column;
     align-items: flex-start;
     position: fixed;
-    top: 0;
-    right: 0;
     z-index: 100;
     width: 250px;
     box-shadow: -.5rem 0 .5rem rgba(0,0,0,0.25)
@@ -114,6 +129,9 @@ nav svg{
     padding: 1rem 1.5rem;
     justify-content: flex-start;
    }
+   nav {
+    height: 7rem;
+   }
    .open-sidebar {
     padding: 2rem;
     display: block;
@@ -122,13 +140,30 @@ nav svg{
     padding: 2rem;
     display: block;
   }
+  .logoText2 {
+    display: flex;
+    font-family: "Raleway";
+    font-size: 4rem;
+  }
   #sidebar-active:checked ~ .links-container {
     display: flex;
   }
-}
-
-#sidebar-active:not(:checked) ~ .links-container {
-  display: none;
+  #sidebar-active:not(:checked) ~ .links-container {
+    display: none;
+  }
+  div.text_hero h3 {
+    display: none;
+  }
+  footer a {
+   display: none;
+  }
+  footer p {
+    text-align: center;
+  }
+  .form_header {
+    align-items: center;
+    justify-content: center;
+  }
 }
 /*HERO*/
 div.hero, div.about_me {
@@ -263,10 +298,10 @@ div.container_me{
 /*CONTACT FORM*/
 
 h1.form_header {
-  display: inline-flex;
+  display: flex;
   color: whitesmoke;
   font-size: 3rem;
-  text-align: center;
+  align-items: start;
   margin-right: 8rem;
 }
 

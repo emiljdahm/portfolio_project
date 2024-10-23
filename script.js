@@ -47,12 +47,22 @@ if(closeSidebarButton) {
     closeSidebarButton.addEventListener('click', ()=> {sidebarToggle.checked = false;
 
     });
+
+}
+if(closeSidebarButton) {
+    closeSidebarButton.addEventListener('click', ()=> {sidebarToggle.checked = true;
+
+    });
+
 }
 
 
 //timed color change events 
 setInterval(colorChange, 3000); // Changes every 3 seconds
 setInterval(colorChangeForm, 5000); // Changes every 3 seconds
+
+
+
 
 
 
